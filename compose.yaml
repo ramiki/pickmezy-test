@@ -1,0 +1,17 @@
+
+services:
+  nextjs:
+    image: pickmezy-test:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: pickmezy-test
+
+    restart: unless-stopped
+
+    ports:
+      - "3000:3000"
+
+    environment:
+      NODE_ENV: production
